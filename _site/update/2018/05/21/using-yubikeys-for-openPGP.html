@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Look what we have done</title>
-  <meta name="description" content="Distinctio quod quia earum. quo itaque tempore quos consequatur ipsa dolorem dolorem. temporibus aut ea illum. fugiat voluptate et pariatur dolorem aut exerc...">
+  <title>Using Yubikey as openPGP smart cards</title>
+  <meta name="description" content="echo &#39;KERNEL==&quot;hidraw*&quot;, SUBSYSTEM==&quot;hidraw&quot;, MODE=&quot;0664&quot;, GROUP=&quot;users&quot;, ATTRS{idVendor}==&quot;2581&quot;, ATTRS{idProduct}==&quot;f1d0&quot;&#39; | sudo tee /etc/udev/rules.d/10-...">
   
   <link rel="stylesheet" href="/assets/css/foundation.css">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,300">
   
 
-  <link rel="canonical" href="http://0.0.0.0:4000/web%20design/web%20development/2017/09/15/look-what-we-have-done.html">
+  <link rel="canonical" href="http://0.0.0.0:4000/update/2018/05/21/using-yubikeys-for-openPGP.html">
   <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="/feed.xml">
   
   
@@ -131,18 +131,12 @@
     <div class='large-9 columns'>
       <div class='mod modBlogPost big no_bg'>
   
-    <div class='images'>
-      
-        <div class='image'><img width="800" height="533" alt="" src="/assets/images/@stock/blog-4.jpg" /></div>
-      
-    </div>
-  
 
   <div class='content'>
     <p class='info'>
-  <span>September 15, 2017</span>
+  <span>May 21, 2018</span>
   /
-  <span>by <a href="javascript:void()">honryou</a></span>
+  <span>by <a href="javascript:void()"></a></span>
 
   
     
@@ -151,10 +145,7 @@
       In
       
         
-        <a href="/blog/categories/#web%20design">web design</a>,
-      
-        
-        <a href="/blog/categories/#web%20development">web development</a>
+        <a href="/blog/categories/#update">update</a>
       
     </span>
 
@@ -162,33 +153,21 @@
 
 </p>
     
-    <h3 class="deco">Look what we have done</h3>
+    <h3 class="deco">Using Yubikey as openPGP smart cards</h3>
 
-    <p>Distinctio quod quia earum. quo itaque tempore quos consequatur ipsa dolorem dolorem. temporibus aut ea illum. fugiat voluptate et pariatur dolorem aut exercitationem perferendis. vel quo id veritatis. ut iusto molestiae et saepe omnis aspernatur adipisci quia sit maxime non. ipsa ex nemo repudiandae et officia dolorum soluta unde ad</p>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0664", GROUP="users", ATTRS{idVendor}=="2581", ATTRS{idProduct}=="f1d0"'</span> | sudo tee /etc/udev/rules.d/10-security-key.rules
+</code></pre>
+</div>
 
-<p>Rem dolores aut consequuntur numquam dolores eum. voluptatem culpa suscipit eligendi et ducimus maxime assumenda facere alias impedit sint. doloribus magnam sint maxime nihil quae veniam aut culpa. non beatae qui reprehenderit totam quis dolores laborum ab molestias itaque consequuntur. at dolores enim voluptatem illo omnis magni eligendi consequatur nostrum natus. quia nesciunt facilis et explicabo optio non laborum laborum deserunt voluptas dolor voluptatem eum dolore. animi laboriosam autem quia labore maiores nulla cum et</p>
+<p>In order for your YubiKey to be a U2F device and behave as a GPG card, you need to put the card into a mode called ‘super combo mode’.</p>
 
-<p>Deleniti laboriosam soluta animi non corrupti. labore est quasi omnis ducimus. facere pariatur molestiae eum vel dignissimos debitis quam et id</p>
+<p>On Arch Linux, I installed yubikey-personalization and set the ‘super combo mode’ (86) like this:</p>
 
-<p>Esse labore voluptate <a href="#">nam dolorum veniam</a> numquam et reiciendis qui itaque voluptas odit dicta et. est ullam et omnis repellat qui aliquam delectus quod aperiam quam tenetur odit illo voluptatem. optio tenetur occaecati autem vel occaecati voluptas iste sunt libero quo est ex eum. aut molestiae ea est inventore aut quia ab voluptatem hic iste</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>pacman -S yubikey-personalization
+ykpersonalize -m 86
+</code></pre>
+</div>
 
-<blockquote>
-  <p>“Provident nihil sint ducimus quasi dignissimos vero esse quisquam Asperiores beatae facere eos corrupti ut autem natus quis cumque dolor.”</p>
-</blockquote>
-
-<h4 id="this-is-a-sub-heading">This is a sub-heading</h4>
-
-<p>Aut ea rem repudiandae tempore perferendis. consequuntur doloribus tempora cupiditate commodi similique doloremque porro labore deleniti. magni est minus atque accusantium dicta consequatur praesentium qui quia non. eum possimus placeat facilis aut qui architecto qui et autem voluptas excepturi nemo. consequatur possimus a accusamus sit consequatur aspernatur aut totam. laudantium odit a praesentium laborum magni autem facere quidem aperiam commodi est. dolore debitis doloremque ea impedit</p>
-
-<ul>
-  <li>Tempora commodi quia deserunt porro excepturi</li>
-  <li>Placeat in quae tempore pariatur sit aut qui nemo</li>
-  <li>Rem quod sequi nobis possimus sequi dolorem est ab</li>
-</ul>
-
-<h5 id="this-is-a-small-title">This is a small title</h5>
-
-<p>Dolorem laudantium possimus esse tenetur voluptates nam. corrupti pariatur commodi est omnis excepturi dignissimos. commodi qui cum tempora ipsa porro quasi quis labore ea cum quod sapiente debitis asperiores. ut qui est ipsa enim numquam odit mollitia. velit earum unde qui animi quod earum repellendus facere aperiam nemo. ipsa praesentium aut quam aperiam qui voluptate</p>
 
   </div>
 </div>
