@@ -9,7 +9,7 @@ services:
     <!-- bg: /assets/images/@stock/service-item-1-bg.jpg -->
   - title: Infrastructure Security Assessments
     icon: fa fa-database
-    desc: We perform external and internal infrastructure VA/PTs. Placeat vel itaque perspiciatis sed repellat qui nihil recusandae doloremque aperiam necessitatibus aspernatur. illum ad adipisci saepe dolores cumque fugit nihil minus.
+    desc: We perform external and internal infrastructure VA/PTs.
     <!-- bg: /assets/images/server.png -->
   - title: Red Team Security Assessments
     icon: fa fa-envelope
@@ -237,7 +237,7 @@ clients:
 <div class="full dark-grey no-padding">
   <div class="members">
     {% for member in page.members %}
-      <div class="small-3 columns">
+      <div class="small-15 columns">
         <div class='member-avatar'>
           <img class="avatar" alt="" src="{{ member.avatar | relative_url }}" />
         </div>
@@ -248,7 +248,7 @@ clients:
 <div class="full no-padding team-bg">
   <div class="div member-decs">
     {% for member in page.members %}
-      <div class="large-3 columns">
+      <div class="large-15 columns">
         <div class='member-dec'>
           <div class='intro'>
             <h3>{{ member.name | escape }}</h3>

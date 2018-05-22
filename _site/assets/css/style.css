@@ -1,3 +1,5 @@
+--
+---
 @charset "UTF-8";
 /*-----------------------------------
 [Table of Contents]
@@ -306,7 +308,8 @@ ul.shortcode-list {
   position: relative; }
 
 .map-overlay {
-  background-color: rgba(134, 131, 87, 0.4);
+  /* background-color: rgba(134, 131, 87, 0.4); */
+  background: rgba(255, 255, 255, 0.7); }
   opacity: 0.8;
   position: absolute;
   z-index: 3;
@@ -379,7 +382,7 @@ ul.shortcode-list {
       margin: 0; }
   .big-social i:hover {
     border: 3px solid #f72e0d;
-    background-color: rgba(237, 183, 19, 0); }
+    background-color: rgba(255, 255, 255, 0); }
 
 
 .big-social h4 {
@@ -496,7 +499,8 @@ ul.shortcode-list {
 
 .button:hover {
   color: #333;
-  background-color: rgba(237, 183, 19, 0.8); }
+  /* background-color: rgba(237, 183, 19, 0.8); } */
+  background: rgba(255, 255, 255, 0.7); }
 
 .button.boxed {
   color: #fff;

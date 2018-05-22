@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
+title: XLADIUS
 
 # This is the place to set up the contact form recipient
 # email: your-email@example.com
@@ -23,9 +23,8 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: xladius.com
+github_username:  xladius
 
 # Build settings
 markdown: kramdown
@@ -42,17 +41,17 @@ incremental: true
 
 exclude: ['gulpfile.js', 'Gemfile', 'Gemfile.lock']
 
-collections:
-  works:
-    output: true
-    permalink: /portfolio/:name/
+# collections:
+#   works:
+#     output: true
+#     permalink: /portfolio/:name/
 
-defaults:
-  - scope:
-      path: ""
-      type: works
-    values:
-      layout: work
+# defaults:
+#   - scope:
+#       path: ""
+#       type: works
+#     values:
+#       layout: work
 
 paginate: 4
 paginate_path: "/blog/page/:num"
